@@ -22,6 +22,7 @@ create table indego.trips_2021_q3 (
 
 drop table if exists indego.trips_2022_q3;
 
+
 create table indego.trips_2022_q3 (
     trip_id text,
     duration integer,

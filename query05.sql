@@ -1,3 +1,4 @@
+-- Active: 1707329957355@@localhost@5432@m509A1
 /*
     What is the longest duration trip across the two quarters?
 
@@ -5,3 +6,12 @@
 */
 
 -- Enter your SQL query here
+WITH TwoTables AS (
+    SELECT duration FROM indego.trips_2021_q3
+    UNION ALL
+    SELECT duration FROM indego.trips_2022_q3
+)
+
+SELECT MAX(duration) AS max_duration
+FROM TwoTables;
+
